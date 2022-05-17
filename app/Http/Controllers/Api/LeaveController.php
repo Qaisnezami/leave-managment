@@ -22,7 +22,7 @@ class LeaveController extends Controller
      */
     public function index()
     {
-
+        // We can user Middlewares as well but to this small project i used if
         if(auth('api')->user()->user_type == 'manager'){
 
             return  LeaveResource::collection(Leave::all());
@@ -50,7 +50,6 @@ class LeaveController extends Controller
            'approvel'=>0,
        ]);
        
-    //    return new LeaveResource($leave);
     }
 
     /**
